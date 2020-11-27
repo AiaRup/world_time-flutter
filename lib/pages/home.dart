@@ -18,8 +18,8 @@ class _HomeState extends State<Home> {
     data = ModalRoute.of(context).settings.arguments;
 
     // set background image
-    String bgImage = data['isDaytime'] ? 'day.png' : 'night.png';
-    Color bgColor = data['isDaytime'] ? Colors.blue : Colors.indigo[700];
+    String bgImage = data['isDaytime'] ? 'day.jpg' : 'night.jpg';
+    Color bgColor = data['isDaytime'] ? Colors.white : Colors.black;
 
     return Scaffold(
       backgroundColor: bgColor,
@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.fromLTRB(0, 120.0, 0, 0),
+            padding: EdgeInsets.fromLTRB(0, 80.0, 0, 0),
             child: Column(
               children: [
                 FlatButton.icon(
@@ -41,16 +41,16 @@ class _HomeState extends State<Home> {
                   },
                   icon: Icon(
                     Icons.edit_location,
-                    color: Colors.grey[300],
+                    color: Colors.white,
                   ),
                   label: Text(
                     'Edit Location',
                     style: TextStyle(
-                      color: Colors.grey[300],
+                      color: Colors.white,
                     ),
                   ),
                 ),
-                SizedBox(height: 20.0),
+                SizedBox(height: 10.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
